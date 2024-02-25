@@ -15,12 +15,12 @@ public class VCInvertCamera : MonoBehaviour
     /// <summary>
     /// Determines whether to invert the X axis.
     /// </summary>
-    public BoolReference InvertXAxis;
+    public bool InvertXAxis;
 
     /// <summary>
     /// Determines whether to invert the Y axis.
     /// </summary>
-    public BoolReference InvertYAxis;
+    public bool InvertYAxis;
 
     /// <summary>
     /// Determines whether to always update the inversion in the Update method.
@@ -56,8 +56,8 @@ public class VCInvertCamera : MonoBehaviour
     {
         if (freeLookComponent != null)
         {
-            freeLookComponent.m_XAxis.m_InvertInput = InvertXAxis.Value;
-            freeLookComponent.m_YAxis.m_InvertInput = InvertYAxis.Value;
+            freeLookComponent.m_XAxis.m_InvertInput = InvertXAxis;
+            freeLookComponent.m_YAxis.m_InvertInput = InvertYAxis;
         }
         else
         {
